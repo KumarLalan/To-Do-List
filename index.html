@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <h3>To Do List</h3>
+        <div class="task-input">
+            <i class="fa-solid fa-pencil"></i>
+            <input type="text" id="data" placeholder="Click to add Task...">
+            <i class="fa-regular fa-floppy-disk" onclick="addtask()"></i>
+        </div>
+        <div class="section">
+            <span id="all" onclick="list()">All</span>
+            <span id="pending" onclick="pendinglist()">Pending</span>
+            <span id="complete" onclick="completdlist()">Completed</span>
+        </div>
+        <ul class="task-area" id="list">
+             <!-- <li class="task">
+                <label > 
+                    <input type="checkbox" id="1">
+                    <p>name</p>
+                </label>
+                <div class="edit">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+            </li>
+            <li class="task">
+                <label > 
+                    <p>name</p>
+                </label>
+                <div class="edit">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <i class="fa-solid fa-trash"></i>
+                </div> -->
+            </li> 
+        </ul>
+        <button class="clear" onclick="clearall()">Clear All</button>
+        <p id="mess"></p>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
