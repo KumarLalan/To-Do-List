@@ -1,53 +1,57 @@
- *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:  sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #6499E9;
+  user-select: none;
+  margin: 0; 
+  font-size: 16px; 
+}
+.container {
+  width: 100%; 
+  max-width: 450px; 
+  padding: 20px;
+  border-radius: 8px;
+  border: 1.5px solid #999;
+  background: #BEFFF7;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #6499E9;
-    user-select: none;
-}
-
-.container{
-    width: 450px;
-    padding: 20px 20px 20px 20px;
-    border-radius: 8px;
-    border: 1.5px solid #999;
-    background: #BEFFF7;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, 0.1);
-}
-h3{
-  font-size: 50px;
+h3 {
+  font-size: 2rem; 
   text-align: center;
   color: darkslateblue;
+  margin-bottom: 20px; 
 }
 .task-input {
   display: flex;
   align-items: center;
-  background-color: #f0f0f0; 
-  padding: 10px; 
+  background-color: #f0f0f0;
+  padding: 10px;
   border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
-  transition: background-color 0.3s ease; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
   cursor: pointer;
+  margin-bottom: 10px; 
 }
 
 .task-input i {
-  margin: 0 10px; 
-  font-size: 20px; 
-  color: #007BFF; 
+  margin: 0 0px;
+  font-size: 20px;
+  color: #007BFF;
   transition: color 0.3s ease;
 }
 
 .task-input i:hover {
-  color: #0056b3; 
+  color: #0056b3;
 }
 
 #data {
@@ -55,39 +59,54 @@ h3{
   outline: none;
   background-color: #f0f0f0;
   font-size: 20px;
-  flex: 1; }
-
+  flex: 1;
+}
 
 .fa-regular.fa-floppy-disk {
-  font-size: 30px; 
-  color: #a7289c; 
+  font-size: 30px;
+  color: #a7289c;
 }
 
 .fa-regular.fa-floppy-disk:hover {
-  color: #212b88; 
+  color: #212b88;
 }
 
-.section{
-   border-bottom: solid black;
+@media (max-width: 768px) {
+  
+  .task-input {
+      padding: 8px; 
+  }
+
+  .task-input i {
+      font-size: 18px; 
+  }
+
+  #data {
+      font-size: 18px; 
+  }
+
+  .fa-regular.fa-floppy-disk {
+      font-size: 24px; 
+  }
 }
-.section span{
-    margin: 10px ;
-    padding: auto;
-    font-size: 20px;
-    border: none;
-    width: 30%;
-    height: 20px;
-    background: transparent;
-    
-    
+.section {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #000; 
+  padding-bottom: 10px; 
 }
+
 .section span {
-  color: initial; 
-  cursor: pointer; 
+  flex: 1; 
+  margin: 10px;
+  padding: 5px 0;
+  text-align: center;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .section span.active {
-  color: rgb(38, 0, 255); 
+  color: rgb(38, 0, 255);
 }
 
 .task {
@@ -118,54 +137,67 @@ h3{
 
 .task p {
   margin: 0;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .edit {
   display: flex;
   align-items: center;
-  margin-left: 60%;
-  gap: 40px;
+  margin-left: 70%;
+  gap: 10%; 
 }
 
-.fa-solid.fa-pen-to-square {
-  font-size: 20px;
+.fa-regular.fa-floppy-disk {
+  font-size: 1.5rem;
+  color: #a7289c;
+}
+
+.fa-regular.fa-floppy-disk:hover {
+  color: #212b88;
+}
+
+.fa-solid.fa-pen-to-square,
+.fa-solid.fa-trash {
+  font-size: 1.5rem;
   color: #5319e4;
   cursor: pointer;
   transition: color 0.3s ease;
 }
-.fa-solid.fa-trash {
-  font-size: 20px;
-  color: #624b5f;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-.fa-solid.fa-pen-to-square:hover:hover {
+
+.fa-solid.fa-pen-to-square:hover {
   color: #b30018;
 }
+
 .fa-solid.fa-trash:hover {
   color: #f00619;
 }
 .clear {
   margin-top: 20px;
-  background-color: #dc3545; 
-  color: #fff; 
-  padding: 10px 20px; 
-  border: none; 
-  border-radius: 5px; 
+  background-color: #dc3545;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 16px; 
+  font-size: 1rem;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .clear:hover {
-  background-color: #c82333; 
-  transform: scale(1.07); 
+  background-color: #c82333;
+  transform: scale(1.07);
 }
-
-#mess{
+#mess {
   margin-top: 10px;
-  margin-left: 200px;
-  font-size: 20px;
+  font-size: 1.2rem;
+  text-align: center;
 }
+@media (max-width: 768px) {
+  .container {
+      max-width: 100%; 
+  }
 
+  h3 {
+      font-size: 1.5rem; 
+  }
+}
